@@ -7,7 +7,7 @@
     "start": "node src/app.js",
     "dev": "nodemon src/app.js"
   },
-  "author": "Manav",
+  "author": "Henish",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.8.4",

@@ -38,23 +38,23 @@ export const Footer = ({ darkMode }) => {
           <p>
             <span className="font-medium">Email:</span>{" "}
             <a
-              href="mailto:manavbarasiya1234@gmail.com"
+              href="mailto:tradahenish94@gmail.com"
               className={`underline hover:opacity-80 ${
                 darkMode ? "text-pink-300" : "text-purple-700"
               }`}
             >
-              manavbarasiya1234@gmail.com
+              tradahenish94@gmail.com
             </a>
           </p>
           <p>
             <span className="font-medium">Phone:</span>{" "}
             <a
-              href="tel:+918320054465"
+              href="tel:+918200079192"
               className={`underline hover:opacity-80 ${
                 darkMode ? "text-pink-300" : "text-purple-700"
               }`}
             >
-              +91 83200 54465
+              +91 8200079192
             </a>
           </p>
           <p className="pt-2 text-xs opacity-80">
@@ -70,7 +70,7 @@ export const Footer = ({ darkMode }) => {
           <div className="flex justify-center sm:justify-end gap-6">
             {/* GitHub */}
             <a
-              href="https://github.com/Manavbarasiya"
+              href="https://github.com/HenishTrada"
               target="_blank"
               rel="noopener noreferrer"
               className={`hover:scale-110 transition-transform ${
@@ -92,7 +92,7 @@ export const Footer = ({ darkMode }) => {
 
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/manav-barasiya-92a602271/"
+              href="https://www.linkedin.com/in/henish-trada-a40931208/"
               target="_blank"
               rel="noopener noreferrer"
               className={`hover:scale-110 transition-transform ${
