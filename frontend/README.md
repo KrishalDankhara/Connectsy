@@ -1,6 +1,6 @@
 # 🌐 Connectsy Frontend
 
-The **frontend** for [Connectsy](https://connectsy-frontend.onrender.com) — a vibrant social connection platform where users can discover, connect, and chat in real-time. Built using **React**, **Redux**, and **Socket.IO**, the UI is responsive, intuitive, and optimized for a seamless user experience.
+The **frontend** for [Connectsy](https://connectsy.vercel.app/) — a vibrant social connection platform where users can discover, connect, and chat in real-time. Built using **React**, **Redux**, and **Socket.IO**, the UI is responsive, intuitive, and optimized for a seamless user experience.
 
 ---
 
