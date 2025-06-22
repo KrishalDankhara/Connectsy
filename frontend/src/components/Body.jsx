@@ -45,7 +45,7 @@ const Body = () => {
 
   useEffect(() => {
     fetchUser();
-  }, []);
+  });
 
   return (
     <div className={`min-h-screen flex flex-col transition-colors duration-300 ${darkMode ? 'dark bg-gray-900' : ''}`}>
