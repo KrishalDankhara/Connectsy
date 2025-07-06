@@ -12,8 +12,8 @@ const initializeSocket = (server) => {
 
   const io = socket(server, {
     cors: {
-      origin: "http://localhost:5173", // your frontend URL
-      credentials: true, 
+      origin: "https://connectsy-frontend-onhh.onrender.com",
+      credentials: true
     },
   });
 
