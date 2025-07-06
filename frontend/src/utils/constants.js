@@ -1,1 +1,1 @@
-export const BASE_URL="https://connectsy.onrender.com"
+export const BASE_URL="http://localhost:5000";

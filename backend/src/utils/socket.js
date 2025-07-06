@@ -12,7 +12,8 @@ const initializeSocket = (server) => {
 
   const io = socket(server, {
     cors: {
-      origin: "https://connectsy.vercel.app",
+      origin: "http://localhost:5173", // your frontend URL
+      credentials: true, 
     },
   });
 
