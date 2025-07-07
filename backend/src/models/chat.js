@@ -1,7 +1,7 @@
 const mongoose=require("mongoose");
 
 const messageSchema=new mongoose.Schema({
-    senderId:{
+    senderId:{   // References the user who sent the message (linked to the backend/src/models/user.js).
         type:mongoose.Schema.Types.ObjectId,
         ref:'User',
         required:true
@@ -10,7 +10,7 @@ const messageSchema=new mongoose.Schema({
         type:String,
         required:true,
     }
-},{timestamps:true})
+},{timestamps:true})  // timestamps: Automatically adds createdAt and updatedAt fields to each message.
 
 const chatSchema=new mongoose.Schema({
     participants:[{

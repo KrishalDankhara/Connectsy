@@ -5,9 +5,9 @@ const Chat = require("../models/chat");
 const initializeSocket = (server) => {
   const getSecretRoomId = (userId, targetUserId) => {
     return crypto
-      .createHash("sha256")
-      .update([targetUserId, userId].sort().join("$"))
-      .digest("hex");
+      .createHash("sha256")  // Creates a SHA-256 hash object (a secure hash algorithm).
+      .update([targetUserId, userId].sort().join("$"))  // Sorts the user IDs and joins them with a dollar sign to create a unique room ID.
+      .digest("hex");  // Outputs the hash as a hexadecimal string (the room ID).
   };
 
   const io = socket(server, {
@@ -27,7 +27,7 @@ const initializeSocket = (server) => {
       onlineUsers[userId] = socket.id;
 
       // Notify all clients that this user is online
-      io.emit("userStatus", { userId, status: "online" });
+      io.emit("userStatus", { userId, status: "online" });  // emit : Send events/data between server and clients in real time
     }
 
     // Join private room

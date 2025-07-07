@@ -8,7 +8,7 @@ import { clearFeed } from "../utils/feedSlice";
 import { removeUser } from "../utils/userSlice";
 import logo from "../assets/logo.png";
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = ({ darkMode, setDarkMode }) => {  // Receives darkMode and setDarkMode as props from the parent (Body.jsx).
   const user = useSelector((store) => store.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();

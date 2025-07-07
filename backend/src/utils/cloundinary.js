@@ -1,3 +1,5 @@
+// This file configures Cloudinary (a cloud image hosting service) and sets up a Multer storage engine for uploading images directly to Cloudinary. It is used for handling user photo uploads in the app.
+
 const cloudinary = require("cloudinary").v2;
 const { CloudinaryStorage } = require("multer-storage-cloudinary");
 

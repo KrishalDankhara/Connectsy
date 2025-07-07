@@ -37,7 +37,7 @@ connectionrequestSchema.pre("save", function(next){
     next();
 })
 const connectionRequestModel = new mongoose.model(
-  "ConnectionRequest",
+  "ConnectionRequest",    // Registers the schema as the ConnectionRequest model for use throughout the backend.
   connectionrequestSchema
 );
 module.exports = connectionRequestModel;

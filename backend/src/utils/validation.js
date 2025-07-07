@@ -1,4 +1,4 @@
-const validate = require("validator");
+const validate = require("validator"); // Imports the validator library, which provides functions for validating strings (like emails and passwords).
 const validateData = (req) => {
   const { firstName, lastName, emailId, password, photoURL,photos } = req.body;
   if (!firstName || !lastName) {
@@ -9,7 +9,7 @@ const validateData = (req) => {
     throw new Error("Please enter strong password");
   }
 };
-const validateUserEditData = (req) => {
+const validateUserEditData = (req) => {  // Purpose: Ensures only allowed fields are being edited in the user profile.
   const ALLOWED_FIELDS = [
     "firstName",
     "lastName",

@@ -10,7 +10,7 @@ userRouter.get("/user/requests/received", userAuth, async (req, res) => {
     const pendingRequests = await ConnectionRequest.find({
       toUserId: loggedInUser._id,
       status: "interested",
-    }).populate("fromUserId", [
+    }).populate("fromUserId", [  // populate: Uses Mongoose's populate to include profile data in responses.
       "firstName",
       "lastName",
       "age",
@@ -102,7 +102,13 @@ userRouter.delete("/request/cancel/:id", userAuth, async (req, res) => {
   }
 });
 
-userRouter.get("/user/connections", userAuth, async (req, res) => {
+// MongoDB query operators:
+// $or  - Match documents if at least one condition is true
+// $and - Match documents only if all conditions are true
+// $nin - Match documents where the field value is NOT in the specified array
+// $ne  - Match documents where the field value is NOT equal to the specified value
+
+userRouter.get("/user/connections", userAuth, async (req, res) => {  // Connections: Users can see all their accepted connections.
   try {
     const loggedInUser = req.user;
     const connections = await ConnectionRequest.find({
@@ -135,7 +141,7 @@ userRouter.get("/user/connections", userAuth, async (req, res) => {
   }
 });
 
-userRouter.get("/user/feed", userAuth, async (req, res) => {
+userRouter.get("/user/feed", userAuth, async (req, res) => {  // Feed: Users can discover new people to connect with.
   try {
     const loggedInUser = req.user;
     const dataFeed = await ConnectionRequest.find({

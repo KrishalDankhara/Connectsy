@@ -1,3 +1,5 @@
+// This file defines the API endpoints for user authentication: signup, login, and logout. It handles user registration, credential validation, and session management using JWT tokens stored in cookies.
+
 const express = require("express");
 const { validateData } = require("../utils/validation");
 const User = require("../models/user");

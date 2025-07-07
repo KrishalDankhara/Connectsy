@@ -17,7 +17,7 @@ import Ignored from "./components/Ignored";
 function App() {
   return (
     <Provider store={appStore}>
-      <BrowserRouter>
+      <BrowserRouter>  {/* BrowserRouter: Enables routing in the app, allowing navigation between different components based on the URL. */}
         <Routes>
           <Route path="/" element={<Body />}>
             <Route path="/" element={<Feed/>}/>

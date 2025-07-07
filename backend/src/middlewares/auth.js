@@ -14,7 +14,7 @@ const userAuth = async (req, res,next) => {
       throw new Error("User not found");
     }
     req.user=user;
-    next();
+    next();  // if user verifies succesfully then it calls the next middleware
   } catch (err) {
     res.status(400).send(err.message);
   }

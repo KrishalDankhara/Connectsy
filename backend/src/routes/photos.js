@@ -1,11 +1,11 @@
 const express = require("express");
-const multer = require("multer");
+const multer = require("multer");   // multer: Middleware for handling multipart/form-data (file uploads).
 const photoRouter = express.Router();
 const { userAuth } = require("../middlewares/auth");
 const User = require("../models/user");
 const { storage, cloudinary } = require("../utils/cloundinary"); // Make sure cloudinary object is exported
 
-const upload = multer({ storage });
+const upload = multer({ storage });  // Configures Multer to use Cloudinary for file storage.
 
 // Upload Photos
 photoRouter.post(
@@ -15,7 +15,7 @@ photoRouter.post(
   async (req, res) => {
     try {
       const user = await User.findById(req.user._id);
-      const photoURLs = req.files.map((file) => file.path); // Cloudinary URLs
+      const photoURLs = req.files.map((file) => file.path); // Extracts the URLs of the uploaded photos from the req.files array (each file object contains a path property with the Cloudinary URL).
 
       user.photos.push(...photoURLs);
       await user.save();
