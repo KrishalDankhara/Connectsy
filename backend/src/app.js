@@ -16,6 +16,12 @@ app.use(
   })
 );
 
+// Explicitly handle preflight OPTIONS requests for all routes
+app.options("*", cors({
+  origin: "https://connectsy-frontend-onhh.onrender.com",
+  credentials: true,
+}));
+
 // Middleware
 app.use(express.json()); // Parse incoming JSON requests
 app.use(cookieParser()); // Parse cookies from incoming requests
